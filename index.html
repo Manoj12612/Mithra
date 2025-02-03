@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Interior Company</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -70,10 +72,14 @@
             padding: 50px 20px;
             background: #fff;
             color: #333;
+            display: flex ;
+            justify-content: center;
+            height: 70vh;
+            flex-direction: column;
         }
         .why-choose-us h2 {
             font-size: 36px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
         .capabilities {
             display: flex;
@@ -148,7 +154,184 @@
         .card p {
             color: #666;
         }
+        .card img{
+            width:30%;
+        }
+        .our-services {
+            text-align: center;
+            padding: 50px 20px;
+            background: #fff;
+            color: #333;
+            height: 100vh; /* Ensure full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+        }
+        
+        .our-services h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center; /* Center items vertically */
+        }
+        
+        .service {
+            text-align: center;
+            background: #5b5b5b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .service:hover {
+            transform: scale(1.05);
+        }
+        
+        .service img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        /* Work Flow Section */
+        .work-flow {
+            background-color: #5a5a5a;
+            padding: 40px;
+            height: 100vh; /* Ensure full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+        }
+        .work-flow h2{
+            font-size: 36px;
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .workflow-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            width: 22%;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .step-content {
+            background: white;
+            padding: 20px;
+            color: black;
+            border-radius: 30%;
+            box-shadow: 0 4px 11px rgb(221 86 86);
+        }
+        .step-content p{
+            color:#00000080;
+        }
+        .step img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        
+        .step:hover {
+            transform: scale(1.05);
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            padding: 10px;
+        }
+        .contact-card {
+            background: #e1e8f0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .contact-card h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        /* Card Container */
+        .contact-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Card Content */
+        .contact-card-content {
+            width: 100%;
+            text-align: left;
+        }
+        
+        .contact-card-content h3 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .contact-card-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-card-content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .contact-card-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-card-content i {
+            font-size: 20px;
+            color: #007bff;
+        }
+        
+        /* Hover Effect on the Card */
+        .contact-card-container:hover {
+            transform: scale(1.05);
+        }
+        .company-logo{
+            display: flex;
+            padding: 0px 20px 20px 20px;
+            justify-content: center;
+        }
         @media (max-width: 768px) {
+            .capabilities, .cards-section, .our-services .service-items, .workflow-steps {
+                flex-direction: column;
+            }
             .header {
                 flex-direction: column;
                 text-align: center;
@@ -163,6 +346,33 @@
             .cards-section {
                 flex-direction: column;
                 align-items: center;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card, .service-item, .step {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .workflow-steps {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .step, .arrow {
+                margin-bottom: 20px;
+            }
+            .step {
+                width: 90%;
+            }
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+            }
+            .detail {
+                width: 80%;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -187,28 +397,106 @@
     <section class="why-choose-us">
         <h2>Why Choose Us?</h2>
         <div class="capabilities">
-            <div class="capability"><img src="icon1.png" alt="No Hidden Cost"> No Hidden Cost</div>
-            <div class="capability"><img src="icon2.png" alt="Fast Delivery"> Fast Deliveries</div>
-            <div class="capability"><img src="icon3.png" alt="100+ Projects"> 100+ Deliveries</div>
-            <div class="capability"><img src="icon4.png" alt="Custom Designs"> Customized Designs</div>
+            <div class="capability"><img src="../Mithra/Images/icons8-cost-30.png" alt="No Hidden Cost"> No Hidden Cost</div>
+            <div class="capability"><img src="../Mithra/Images/icons8-delivery-50.png" alt="Fast Delivery"> Fast Deliveries</div>
+            <div class="capability"><img src="../Mithra/Images/icons8-delivery-handcart-30.png" alt="100+ Projects"> 100+ Deliveries</div>
+            <div class="capability"><img src="../Mithra/Images/icons8-design-50.png" alt="Custom Designs"> Customized Designs</div>
         </div>
     </section>
     <section class="cards-section">
         <div class="card">
-            <img src="icon1.png" alt="No Hidden Cost">
+            <div> <img src="../Mithra/Images/Experience.png" alt="No Hidden Cost"></div>
             <h3>Get Live Experience</h3>
             <p>Experience spaces that come alive with innovative design and personalized comfort.</p>
         </div>
         <div class="card">
-            <img src="icon1.png" alt="No Hidden Cost">
+            <div><img src="../Mithra/Images/Designs.png" alt="No Hidden Cost"></div>
             <h3>Comprehensive Designs</h3>
             <p>From concept to completion, we create homes that reflect your style in every detail.</p>
         </div>
         <div class="card">
-            <img src="icon1.png" alt="No Hidden Cost">
+            <div><img src="../Mithra/Images/Quest.png" alt="No Hidden Cost"></div>
             <h3>Quality is Our Quest</h3>
             <p>We ensure exceptional quality and precision in every corner of your home.</p>
         </div>
     </section>
+    <section class="our-services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service"><img src="../Mithra/Images/living.jpeg" alt="Living Room"><h3>Living Room</h3></div>
+            <div class="service"><img src="../Mithra/Images/bedroom.jpeg" alt="Bedroom"><h3>Bedroom</h3></div>
+            <div class="service"><img src="../Mithra/Images/dinning.jpeg" alt="Dining Room"><h3>Dining Room</h3></div>
+            <div class="service"><img src="../Mithra/Images/kitchen.jpeg" alt="Kitchen"><h3>Kitchen</h3></div>
+            <div class="service"><img src="../Mithra/Images/bathroom.jpeg" alt="Bathroom"><h3>Bath room</h3></div>
+        </div>
+    </section>
+    <section class="work-flow"> 
+        <h2>Our Work Flow</h2>
+        <div class="workflow-steps">
+            <div class="step">
+                <div class="step-content">
+                    <img src="../Mithra/Images/Designer.png" alt="Meet the Designer">
+                    <h3>Meet the Designer</h3>
+                    <p>Connect with our expert designers to bring your vision to life.</p>
+                </div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-content">
+                    <img src="../Mithra/Images/work.png" alt="Start the Work">
+                    <h3>Start the Work</h3>
+                    <p>Once finalized, we begin executing your dream interior.</p>
+                </div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-content">
+                    <img src="../Mithra/Images/Progress.png" alt="Working Progress">
+                    <h3>Working Progress</h3>
+                    <p>Our team ensures quality and efficiency throughout the process.</p>
+                </div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-content">
+                    <img src="../Mithra/Images/SmoothDelivery.png" alt="Smooth Delivery">
+                    <h3>Smooth Delivery</h3>
+                    <p>Timely completion with utmost perfection and customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-card">
+        <h2>Contact Us</h2>
+        <div class="contact-card-container">
+            <div class="contact-card-content">
+                <div class="company-logo">
+                    <h3>Mithra Interiors</h3>
+                </div>
+                
+                <p class="location">
+                    <i class="fa fa-map-marker"></i> 
+                    <a href="https://www.google.com/maps?q=No+65+8th+Cross,+Horamavu+Road,+Horamavu,+Bangalore+-+560043+(Banjara+Layout)" target="_blank">
+                        No 65 8th Cross, Horamavu Road, Horamavu, Bangalore - 560043 (Banjara Layout)
+                    </a>
+                </p>
+                <p class="contact">
+                    <i class="fa fa-phone"></i> 
+                    <a href="tel:+918125556592">81255 56592</a>
+                </p>
+                <p class="email">
+                    <i class="fa fa-envelope"></i> 
+                    <a href="mailto:madiriuday@gmail.com">madiriuday@gmail.com</a>
+                </p>
+                <p class="timing">
+                    <i class="fa fa-clock"></i> 
+                    Mon-Sat: 9 AM - 7 PM <br> 
+                    Sun: 10 AM - 4 PM
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
 </body>
 </html>
